@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: math-mentor-ai
+    env: node
+    plan: free
+    buildCommand: npm run render-postbuild
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: ADMIN_PASSWORD
+        value: admin123
+      - key: REDIS_URL
+        fromDatabase:
+          name: math-mentor-redis
+          property: connectionString
+
+databases:
+  - name: math-mentor-redis
+    plan: free
+    type: redis

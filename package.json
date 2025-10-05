@@ -6,13 +6,18 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node server.js",
+    "render-postbuild": "npm run build && npm install"
   },
   "dependencies": {
     "@google/genai": "^1.22.0",
     "@vercel/kv": "^3.0.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "redis": "^5.8.3"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
