@@ -1,0 +1,5 @@
+{
+  "name": "Math Mentor AI",
+  "description": "An AI-powered chatbot, Math Mentor AI, helps you solve math problems. Upload a picture or type your question and get step-by-step solutions.",
+  "requestFramePermissions": []
+}
